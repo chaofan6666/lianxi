@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+      <!-- 设置网页编码 万国码 -->
+    <meta charset="utf-8">
+    <!-- 如果是ie浏览器  使用最新渲染引擎来解析页面 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 设置移动端视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap</title>
+
+    <!-- Bootstrap -->
+    <link href="./lib(库)/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/wjsfont.css">
+    <!-- css的引入注意事项 自己写的尽量在插件的下面引入  可以拿到代码的主动权 -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    <!-- 头部 -->
+    <div class="wjs-header hidden-xs hidden-sm">  <!-- hidden-sm 小屏隐藏-->
+        <div class="container">  <!--容器-->
+            <div class="row">   <!--行-->
+                <div class="col-md-2 ">
+                    <span class="wjs_icon_phone"></span>
+                    <a href="#" class="m-wjs">手机微金所
+                      <img src="images/code.jpg" class="code" alt="">
+                    </a>
+                    <span class="glyphicon glyphicon-menu-down"></span>
+                </div><!--列-->
+                <div class="col-md-5">
+                    <span class="wjs_icon_tel"></span>
+                    <span>4006-89-4006 (服务时间: 9:00-21:00)</span>
+                </div>
+                <div class="col-md-2">
+                    <a href="#">常见问题</a>
+                    <a href="#">财富登录</a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#" class="btn btn-danger btn-xs btn-register">免费注册</a>
+                    <a href="#" data-toggle="modal" data-target=".login-box1">登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 导航条 -->
+    <div class="wjs-nav">
+        <nav class="navbar wjs-navbar">
+            <div class="container">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <!-- 导航头部 -->
+              <div class="navbar-header">
+                                  <!-- data-toggle  data开头的是自定义属性 一般和js有关  不建议去修改
+                                  data-target   意思是控制  属性值为控制的目标
+                                  了解:  aria 跟布局无关 主要针对屏幕阅读器等辅助设备专为残疾人士设计     
+                                          aria-expanded="false" 意思是没有展开 -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-body" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <!--  导航 商品标识 logo -->
+                <a class="navbar-brand" href="#">
+                  <span class="wjs_icon_logo"></span>
+                  <span class="wjs_icon_word"></span>
+                </a>
+              </div>
+              <!-- 导航主体 -->
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="nav-body">
+                <!-- 左侧导航 -->
+                <ul class="nav navbar-nav">
+                  <li><a href="#">我要投资</a></li>
+                  <li><a href="#">我要借贷</a></li>
+                  <li><a href="#">平台介绍</a></li>
+                  <li><a href="#">新手专区</a></li>
+                  <li><a href="#">最新动态</a></li>
+                  <li><a href="#">微平台</a></li>
+                </ul>
+                <!-- 右侧导航 -->
+                <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
+                  <li><a href="#">个人中心</a></li>
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>
+    </div>
+    <!-- 轮播图 -->
+    <div class="wjs-banner">
+      <div id="my-carousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#my-carousel" data-slide-to="1"></li>
+          <li data-target="#my-carousel" data-slide-to="2"></li>
+          <li data-target="#my-carousel" data-slide-to="3"></li>
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <div class="pc-img hidden-xs" style="background-image:url('images/slide_01_2000x410.jpg');"></div>
+            <img class="m-img visible-xs" src="images/slide_01_640x340.jpg" alt=""> <!--visible-xs 只在小屏显示-->
+          </div>
+          <div class="item">
+            <div class="pc-img hidden-xs" style="background-image:url('images/slide_02_2000x410.jpg');"></div>
+            <img class="m-img visible-xs" src="images/slide_02_640x340.jpg" alt="">
+          </div>
+          <div class="item">
+            <div class="pc-img hidden-xs" style="background-image:url('images/slide_03_2000x410.jpg');"></div>
+            <img class="m-img visible-xs" src="images/slide_03_640x340.jpg" alt="">
+          </div>
+          <div class="item">
+            <div class="pc-img hidden-xs" style="background-image:url('images/slide_04_2000x410.jpg');"></div>
+            <img class="m-img visible-xs" src="images/slide_04_640x340.jpg" alt="">
+          </div>
+        </div>
+      
+        <!-- Controls -->
+        <!-- a标签href属性和data-target都可以指向被控制的目标(要控制的目标) -->
+        <a class="left carousel-control" href="#my-carousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#my-carousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+    </div>
+    <!-- 信息模块 -->
+    <div class="wjs-info hidden-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <div class="media">
+              <div class="media-left ">
+                <span class="wjs_icon_safe"></span>   <!--字体图标-->
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">支付交易保障</h4>
+                <p>银联支付全程保证支付安全</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="media">
+              <div class="media-left ">
+                <span class="wjs_icon_safe"></span>   <!--字体图标-->
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">支付交易保障</h4>
+                <p>银联支付全程保证支付安全</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="media">
+              <div class="media-left ">
+                <span class="wjs_icon_safe"></span>   <!--字体图标-->
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">支付交易保障</h4>
+                <p>银联支付全程保证支付安全</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="media">
+              <div class="media-left ">
+                <span class="wjs_icon_safe"></span>   <!--字体图标-->
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">支付交易保障</h4>
+                <p>银联支付全程保证支付安全</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="media">
+              <div class="media-left ">
+                <span class="wjs_icon_safe"></span>   <!--字体图标-->
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">支付交易保障</h4>
+                <p>银联支付全程保证支付安全</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="media">
+              <div class="media-left ">
+                <span class="wjs_icon_safe"></span>   <!--字体图标-->
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">支付交易保障</h4>
+                <p>银联支付全程保证支付安全</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 预约模块 -->
+    <div class="wjs-book">
+      <div class="container">
+        <div class="pull-left">
+          <span class="wjs_icon_clock"></span>
+          现在有 273 人在排队,累计预约交易成功 7571 次。 什么是预约投标?
+          <a href="#" class="book-link">立即预约</a>
+        </div>
+        <div class="pull-right hidden-xs">
+          <a href="#">
+            <span class="wjs_icon_video"></span>微金所企业宣传片
+          </a>
+        </div>  
+      </div>
+    </div>
+    <!-- 产品模块 -->
+    <div class="wjs-product">
+      <div class="container">
+        <!-- 导航 -->
+        <div class="cut">
+          <ul class="nav wjs-tabs" >
+            <li class="active"><a href="#tab1" data-toggle="tab">特别推荐</a></li>
+            <li><a href="#tab2" data-toggle="tab">微平台</a></li>
+            <li><a href="#tab3" data-toggle="tab">微平台</a></li>
+            <li><a href="#tab4" data-toggle="tab">微平台</a></li>
+            <li><a href="#tab5" data-toggle="tab">微平台</a></li>
+            <li><a href="#tab6" data-toggle="tab">微平台</a></li>
+            <li><a href="#tab7" data-toggle="tab">微平台</a></li>
+          </ul>
+        </div>
+        <!-- 主体 -->
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div  class="tab-pane active" id="tab1">
+            <div class="row">
+              <div class="col-md-4 col-sm-6 col-xs-12">  <!--如果屏幕不适配了 就会独占一行-->
+                <div class="in">
+                  <!-- 浮动的盒子只会影响他下面的盒子  所以right 要写在left上面 -->
+                  <div class="right text-center">
+                    <p><span>8</span>%</p>
+                    <p>年利率</p>
+                  </div>
+                  <div class="left">
+                    <h4 class="text-center">新手体验01期</h4>
+                    <div class="col-xs-6">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                    <div class="col-xs-6">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="in">
+                  <!-- 浮动的盒子只会影响他下面的盒子  所以right 要写在left上面 -->
+                  <div class="right text-center">
+                    <p><span>8</span>%</p>
+                    <p>年利率</p>
+                  </div>
+                  <div class="left">
+                    <h4 class="text-center">新手体验01期</h4>
+                    <div class="col-xs-6">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                    <div class="col-xs-6">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-12 current">
+                <div class="in">
+                  <!-- 浮动的盒子只会影响他下面的盒子  所以right 要写在left上面 -->
+                  <div class="right text-center">
+                    <p><span>8</span>%</p>
+                    <p>年利率</p>
+                  </div>
+                  <div class="left">
+                    <h4 class="text-center">新手体验01期</h4>
+                    <div class="col-xs-6">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                    <div class="col-xs-6">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="in">
+                  <!-- 浮动的盒子只会影响他下面的盒子  所以right 要写在left上面 -->
+                  <div class="right text-center">
+                    <p><span>8</span>%</p>
+                    <p>年利率</p>
+                  </div>
+                  <div class="left">
+                    <h4 class="text-center">新手体验01期</h4>
+                    <div class="col-xs-6">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                    <div class="col-xs-6">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="in">
+                  <!-- 浮动的盒子只会影响他下面的盒子  所以right 要写在left上面 -->
+                  <div class="right text-center">
+                    <p><span>8</span>%</p>
+                    <p>年利率</p>
+                  </div>
+                  <div class="left">
+                    <h4 class="text-center">新手体验01期</h4>
+                    <div class="col-xs-6">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                    <div class="col-xs-6">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="in">
+                  <!-- 浮动的盒子只会影响他下面的盒子  所以right 要写在left上面 -->
+                  <div class="right text-center">
+                    <p><span>8</span>%</p>
+                    <p>年利率</p>
+                  </div>
+                  <div class="left">
+                    <h4 class="text-center">新手体验01期</h4>
+                    <div class="col-xs-6">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                    <div class="col-xs-6">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <p>起投金额</p>
+                      <p>100万</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div  class="tab-pane" id="tab2">...</div>
+          <div  class="tab-pane" id="tab3">...</div>
+          <div  class="tab-pane" id="tab4">...</div>
+          <div  class="tab-pane" id="tab5">...</div>
+          <div  class="tab-pane" id="tab6">...</div>
+          <div  class="tab-pane" id="tab7">...</div>
+        </div>
+      
+      </div>
+    </div>
+    <!-- 新闻模块 -->
+    <div class="wjs-news">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 col-md-offset-2">
+            <h4>全部新闻</h4>
+          </div>
+          <div class="col-md-1">
+            <div class="line hidden-sm hidden-xs"></div>
+            <ul class="nav news-tabs">
+              <li class="active"><a href="#home" data-toggle="tab"><span class="wjs_icon_news_01"></span></a></li>
+              <li ><a href="#profile" data-toggle="tab"><span class="wjs_icon_news_02"></span></a></li>
+              <li ><a href="#messages" data-toggle="tab"><span class="wjs_icon_news_03"></span></a></li>
+              <li ><a href="#settings" data-toggle="tab"><span class="wjs_icon_news_04"></span></a></li>
+            </ul>
+          </div>
+          <div class="col-md-7">
+            <div class="tab-content">
+              <div class="tab-pane active" id="home">
+                <ul>
+                  <li><a href="#">2020-09-22【微还款】一周还款公告2020年1月18日-1月24日</a></li>
+                  <li><a href="#">2020-09-22【微还款】一周还款公告2020年1月18日-1月24日</a></li>
+                  <li><a href="#">2020-09-22【微还款】一周还款公告2020年1月18日-1月24日</a></li>
+                  <li><a href="#">2020-09-22【微还款】一周还款公告2020年1月18日-1月24日</a></li>
+                  <li><a href="#">2020-09-22【微还款】一周还款公告2020年1月18日-1月24日</a></li>
+                  <li><a href="#">2020-09-22【微还款】一周还款公告2020年1月18日-1月24日</a></li>
+                  <li><a href="#">2020-09-22【微还款】一周还款公告2020年1月18日-1月24日</a></li>
+                  <li><a href="#">2020-09-22【微还款】一周还款公告2020年1月18日-1月24日</a></li>
+                  <li><a href="#">2020-09-22【微还款】一周还款公告2020年1月18日-1月24日</a></li>
+                </ul>
+              </div>
+              <div class="tab-pane" id="profile">...</div>
+              <div class="tab-pane" id="messages">...</div>
+              <div class="tab-pane" id="settings">...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 合作伙伴 -->
+    <div class="wjs-partner text-center">
+      <h4>合作伙伴</h4>
+      <ul>
+        <li><span class="wjs_icon_partner01"></span></li>
+        <li><span class="wjs_icon_partner02"></span></li>
+        <li><span class="wjs_icon_partner03"></span></li>
+        <li><span class="wjs_icon_partner04"></span></li>
+        <li><span class="wjs_icon_partner05"></span></li>
+        <li><span class="wjs_icon_partner06"></span></li>
+        <li><span class="wjs_icon_partner07"></span></li>
+        <li><span class="wjs_icon_partner08"></span></li>
+        <li><span class="wjs_icon_partner09"></span></li>
+      </ul>
+    </div>
+    <!-- 模态框 -->
+    <div class="modal fade login-box1" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="panel panel-primary">
+            <div class="panel-heading">用户登录</div>
+            <div class="panel-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                      <label for="email" class="col-sm-3 control-label">邮箱:</label><!--label标签是点击里面的文字获取焦点-->
+                      <div class="col-sm-9">
+                        <input type="email" class="form-control" id="email" placeholder="邮箱">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputPassword3" class="col-sm-3 control-label">密码:</label>
+                      <div class="col-sm-9">
+                        <input type="password" class="form-control" id="inputPassword3" placeholder="密码">
+                      </div>
+                    </div>
+                  </form>
+            </div>
+            <div class="panel-footer clearfix">  <!--clearfix 清除浮动带来的因素-->
+                <div class="col-xs-12">
+                    <a href="#" class="btn btn-danger pull-left" data-dismiss="modal">取消</a>
+                    <a href="#" class="btn btn-primary pull-right">登录</a>
+                </div>
+            </div>
+        </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="lib(库)/jquery/jquery.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="lib(库)/bootstrap/js/bootstrap.min.js"></script>
+    <!-- mormalize.css支持包括手机浏览器在内的很多浏览器 同时对h5元素 排版 列表 嵌入的内容 表单和表格都进行了一般化(就是不让他们存在差异性) -->
+    <script src="js/index.js"></script>
+  </body>
+</html>
